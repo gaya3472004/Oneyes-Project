@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Thozhil - Career Solutions</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4b79a1, #283e51);
+            padding: 1rem 0;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-section {
+            text-align: center;
+            background:  no-repeat center/cover;
+            color: black;
+            padding: 5rem 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section .btn {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero-section .btn:hover {
+            background: #ff3b3b;
+        }
+
+        .features {
+            background: #fff;
+            padding: 2rem 0;
+        }
+
+        .features .card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .features .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .features .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .step-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.step-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.enroll-section {
+    background-color: #f8f9fa; /* Section background color */
+    padding: 70px 0; /* More padding for emphasis */
+}
+
+.enroll-image {
+    position: relative;
+    height: 500px; /* Increase the height of the image */
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.enroll-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Darken image for better contrast */
+}
+
+.enroll-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.enroll-tagline {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: iridescent 5s ease-in-out infinite;
+}
+
+@keyframes iridescent {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.enroll-btn {
+    padding: 20px 50px; /* Bigger button padding */
+    font-size: 20px; /* Larger button text size */
+    background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient color */
+    color: #fff;
+    border: none;
+    border-radius: 40px; /* More rounded button */
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.enroll-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        footer {
+            background: #283e51;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff3b3b;
+        }
+
+.subscribe-container {
+    background: #283e51; /* Matches footer background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.subscribe-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches footer link color */
+}
+
+.subscribe-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+
+
+
+
+.subscribe-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff; /* White color for icons */
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */
+    color: #ff6b6b; /* Change color on hover */
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Thozhil</div>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about_us">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/how_it_works">How It Works</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/login_register">Login/Register</a></li>
+
+    
+        </ul>
+    </div>
+</header>
+
+<section class="hero-section">
+   <h2 style="text-align: center;">Fueling Your Journey:  Internships Ignite, Jobs Propel</h2>
+      <h2 style="text-align: center;">  Your Trailblazing Odyssey Begins Here!</h2>
+      <br><br>
+    <a href="/login_register" class="btn">Enroll Now</a>
+</section>
+
+<section class="features py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/index_img/eff.png" class="card-img-top" alt="Feature 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Efficiency Enhancing</h5>
+                        <p class="card-text">Save Time with Thozhil! Streamline your journey to success.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/index_img/flex.png" class="card-img-top" alt="Feature 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Complete Flexibility</h5>
+                        <p class="card-text">Empower yourself with choices, ensuring your journey to success is uniquely yours.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/index_img/guar.png" class="card-img-top" alt="Feature 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Guaranteed Placement</h5>
+                        <p class="card-text">Our commitment ensures your success – a promise fulfilled in every career step.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="steps py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Use <b>Thozil's</b> Steps for Professional Success</h2>
+        <div class="row g-4 text-center">
+            <!-- Step 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/acc.png" class="card-img-top" alt="Account Creation">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 1: Account Creation</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/cus.png" class="card-img-top" alt="Customize Your Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 2: Customize Your Profile</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/app.png" class="card-img-top" alt="Easy Application Process">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 3: Easy Application Process</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/not.png" class="card-img-top" alt="Timely Notifications">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 4: Timely Notifications</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/das.png" class="card-img-top" alt="Easy Dashboard Access">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 5: Easy Dashboard Access</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/ass.png" class="card-img-top" alt="Assessment Process">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 6: Assessment Process</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/f2f.png" class="card-img-top" alt="F2F Process">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 7: F2F Process</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card step-card h-100">
+                    <img src="/index_img/offer.png" class="card-img-top" alt="Offer Releases">
+                    <div class="card-body"><br>
+                        <h5 class="card-title">Step 8: Offer Releases</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="enroll-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 position-relative">
+                <div class="enroll-image text-center">
+                    <img src="/index_img/enroll.png" alt="Enroll Now" class="img-fluid w-100 rounded">
+                    <div class="enroll-content position-absolute">
+                        <p class="enroll-tagline mb-3">Your Path to Excellence Starts Here</p>
+                        <a href="/login_register" class="btn enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="/">Home</a><br>
+                <a href="/about_us">About Us</a><br>
+                <a href="/careers">Careers</a><br>
+                <a href="/how_it_works">How It Works</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="/login_register">Login/Register</a><br>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <a href="#">Our Mission</a><br>
+                <a href="#">Our Vision</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="/faq">FAQ</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Pricing Policy</a><br>
+            </div>
+
+            <!-- Subscribe Section -->
+<div class="col-md-4">
+    <div class="subscribe-container text-center p-4">
+        <h5 class="subscribe-title mb-3">Stay Connected!</h5>
+        <p class="subscribe-text mb-4">Subscribe to our newsletter for updates and insights.</p>
+        <form class="subscribe-form d-flex justify-content-center">
+            <input type="email" class="form-control me-2" placeholder="Your Email" required>
+            <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+
+            <!-- Contact Us Section -->
+                <div class="col-md-4">
+    <h5>Contact Us</h5>
+    <p>Email: <a href="mailto:support@thozhil.co.in">info@thozhil.co.in</a></p>
+    <p>Phone: +91 784 592 1063</p>
+    <div class="social-icons mt-3">
+        <a href="https://www.facebook.com/profile.php?id=61556333192870&mibextid=2JQ9oc" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/thozhil_global/?igsh=MWd3c2JxYXpvNHhoaw%3D%3D" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/thozhil/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center">
+            <p>&copy; 2024 Thozhil. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

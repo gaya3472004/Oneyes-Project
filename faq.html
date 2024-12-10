@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Thozhil - Career Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4b79a1, #283e51);
+            padding: 1rem 0;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-section {
+            text-align: center;
+            background:  no-repeat center/cover;
+            color: black;
+            padding: 5rem 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section .btn {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero-section .btn:hover {
+            background: #ff3b3b;
+        }
+
+        .hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f7fa;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 80%; /* Adjust based on how large you want the image */
+    max-width: 500px; /* Max width to ensure it doesn't stretch too much */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: to give the image rounded corners */
+}
+
+/* General Section Styling */
+.features {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 60px 20px;
+}
+.features h3 {
+    font-size: 28px;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+.features p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Card Styling */
+.img-fluid {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+        width: 80%;  /* Adjust this value to your preference */
+    height: auto;
+}
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Row Spacing */
+.mb-5 {
+    margin-bottom: 40px !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .features h3 {
+        font-size: 24px;
+    }
+    .features p {
+        font-size: 16px;
+    }
+}
+
+
+
+/*faq questions*/
+.faq-section {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.faq-item {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    background: none;
+    color: #0066cc;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+.faq-question:hover {
+    color: #0057b8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    animation: zoomIn 0.3s ease-out;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+        footer {
+            background: #283e51;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff3b3b;
+        }
+
+        .subscribe-container {
+    background: #283e51; /* Matches footer background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.subscribe-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches footer link color */
+}
+
+.subscribe-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+
+
+
+
+.subscribe-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff; /* White color for icons */
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */
+    color: #ff6b6b; /* Change color on hover */
+}
+
+
+
+    </style>
+
+<script>
+    function toggleModal(modalId) {
+    var modal = document.getElementById(modalId);
+    // Toggle the display of the modal
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+    } else {
+        modal.style.display = 'flex';
+    }
+}
+
+
+</script>
+ </head>
+<body>
+
+<header>
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Thozhil</div>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about_us">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/how_it_works">How It Works</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/login_register">Login/Register</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="hero-section">
+    <div class="image-container">
+        <img src="/faq_img/faqmain.png" alt="People Thinking with Question Marks" class="hero-image">
+    </div>
+    <h3 style="text-align: center;">Do You Have Questions?</h3>
+    <br>
+    <p style="text-align: center;">We have answers (well, most of the times!)</p>
+    
+</section>
+
+
+ <!-- faq questions Section -->
+<section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+        <!-- Question 1 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-1')">What is Thozhil and how does it work?
+</button>
+            <div class="modal" id="modal-1">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-1')">×</button>
+                    <p>Thozhil is an innovative online platform designed to connect talented individuals with exciting internship & job opportunities. Our platform utilizes cutting-edge algorithms to match candidates with positions that align with their skills, qualifications, and career aspirations.
+</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-2')">What types of internships and jobs are available on Thozhil?
+</button>
+            <div class="modal" id="modal-2">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-2')">×</button>
+                    <p>Thozhil offers a diverse array of opportunities, ranging from internships to part-time and full-time positions. Our platform spans various industries, including technology, finance, marketing, and more, catering to individuals at different stages of their careers.
+</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-3')">How can I sign up for an account on Thozhil?
+</button>
+            <div class="modal" id="modal-3">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-3')">×</button>
+                    <p>Signing up for Thozhil is a breeze! Simply visit our website, click on the "Sign Up" button, and follow the prompts to create your account. Fill in some basic information and set up your profile to get started.
+.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">Is Thozhil suitable for both internships and full-time positions?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Absolutely! Thozhil caters to both individuals seeking valuable internship experiences and those looking for full-time positions to advance their careers.
+</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">Is there a deadline for internship applications?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Yes, each internship may have a different application deadline. Make sure to check the deadline for the specific internship you are interested in and submit your application before that date.
+</p>
+                </div>
+            </div>
+        </div>
+         <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">How does Thozhil match candidates with suitable opportunities?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Our platform employs an advanced matching algorithm that carefully analyses your profile, taking into account your skills, experience, and preferences. This ensures that you receive personalized recommendations tailored to your unique qualifications and career goals.
+</p>
+                </div>
+            </div>
+        </div>
+         <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">Are there any fees associated with using Thozhil?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Yes, Thozhil has a nominal registration fee to access our platform's comprehensive features and opportunities. This fee helps us maintain the quality of our services and support a seamless experience for all users.
+</p>
+                </div>
+            </div>
+        </div>
+         <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">How does the application process work on Thozhil?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Applying is simple. Once you find a position of interest, click on "Apply Now" and follow the instructions. You can also conveniently track your application status through your personalized dashboard.
+</p>
+                </div>
+            </div>
+        </div>
+         <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleModal('modal-4')">How does Thozhil ensure the quality and legitimacy of job postings?
+</button>
+            <div class="modal" id="modal-4">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleModal('modal-4')">×</button>
+                    <p>Thozhil is designed with a user-friendly interface, ensuring a seamless experience for both candidates and employers, facilitating easy navigation and interaction.
+</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="/">Home</a><br>
+                <a href="/about_us">About Us</a><br>
+                <a href="/careers">Careers</a><br>
+                <a href="/how_it_works">How It Works</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="/login_register">Login/Register</a><br>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <a href="#">Our Mission</a><br>
+                <a href="#">Our Vision</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="/faq">FAQ</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Pricing Policy</a><br>
+            </div>
+
+                      <!-- Subscribe Section -->
+<div class="col-md-4">
+    <div class="subscribe-container text-center p-4">
+        <h5 class="subscribe-title mb-3">Stay Connected!</h5>
+        <p class="subscribe-text mb-4">Subscribe to our newsletter for updates and insights.</p>
+        <form class="subscribe-form d-flex justify-content-center">
+            <input type="email" class="form-control me-2" placeholder="Your Email" required>
+            <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+            <!-- Contact Us Section -->
+          <div class="col-md-4">
+    <h5>Contact Us</h5>
+    <p>Email: <a href="mailto:support@thozhil.co.in">info@thozhil.co.in</a></p>
+    <p>Phone: +91 784 592 1063</p>
+    <div class="social-icons mt-3">
+        <a href="https://www.facebook.com/profile.php?id=61556333192870&mibextid=2JQ9oc" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/thozhil_global/?igsh=MWd3c2JxYXpvNHhoaw%3D%3D" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/thozhil/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</div>
+
+
+        <!-- Footer Bottom -->
+        <div class="text-center">
+            <p>&copy; 2024 Thozhil. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

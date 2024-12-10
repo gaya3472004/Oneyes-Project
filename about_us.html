@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Thozhil - Career Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4b79a1, #283e51);
+            padding: 1rem 0;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-section {
+            text-align: center;
+            background:  no-repeat center/cover;
+            color: black;
+            padding: 5rem 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section .btn {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero-section .btn:hover {
+            background: #ff3b3b;
+        }
+
+        <style>
+/* General Section Styling */
+.features {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 60px 20px;
+}
+.features h3 {
+    font-size: 28px;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+.features p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Card Styling */
+.img-fluid {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+        width: 80%;  /* Adjust this value to your preference */
+    height: auto;
+}
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Row Spacing */
+.mb-5 {
+    margin-bottom: 30px !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .features h3 {
+        font-size: 24px;
+    }
+    .features p {
+        font-size: 16px;
+    }
+}
+
+/* Styled Heading */
+.styled-heading {
+    font-family: 'Poppins', sans-serif; /* Ensure font is linked */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #1976d2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Gradient Text Effect */
+.styled-heading {
+    background: linear-gradient(90deg, #1976d2, #42a5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adding a Decorative Line Below */
+.styled-heading::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #42a5f5;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+/* Box Shadow */
+.styled-heading-container {
+    display: inline-block;
+    background: #f5f7fa;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Animation (Optional) */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.styled-heading {
+    animation: fadeInSlide 1s ease-out;
+}
+
+        /*.features {
+            background: #fff;
+            padding: 2rem 0;
+        }
+
+        .features .card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .features .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .features .card img {
+            height: 200px;
+            object-fit: cover;
+        }*/
+
+        /* Section Styling */
+/* client Styling */
+/* Section Styling */
+.our-clients {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.clients-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 30px;
+}
+
+/* Clients Container Styling */
+.clients-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Client Item Styling */
+.client-item {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    animation: wobble 2s ease-in-out infinite; /* Continuous wobble */
+}
+
+/* Images Styling */
+.client-item img {
+    width: 80%; /* Adjust size to fit the box */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.client-item:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect on Image */
+.client-item:hover img {
+    transform: rotate(5deg); /* Adds a slight rotation effect */
+}
+
+/* Wobble Animation */
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(-5deg);
+    }
+    45% {
+        transform: rotate(3deg);
+    }
+    60% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    90% {
+        transform: rotate(-1deg);
+    }
+}
+
+
+
+
+        footer {
+            background: #283e51;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff3b3b;
+        }
+
+        .subscribe-container {
+    background: #283e51; /* Matches footer background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.subscribe-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches footer link color */
+}
+
+.subscribe-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+
+
+
+
+.subscribe-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff; /* White color for icons */
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */
+    color: #ff6b6b; /* Change color on hover */
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Thozhil</div>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about_us">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/how_it_works">How It Works</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/login_register">Login/Register</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="hero-section" style="padding-bottom: 20px; margin-bottom: 10px;">
+    <h3 style="text-align: center; ">Embarking on your career journey?</h3>
+    <br>
+   <p style="text-align: center; font-size: 20px;">Trust our commitment for a seamless start, turning your career dreams into a tangible reality.</p>
+        <br>
+<h2 class="styled-heading">What We Do & Who We Are?</h2>
+</section>
+ <!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+        <!-- Feature 1 -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <img src="/about_img/goals.png" class="img-fluid rounded" alt="Define your goals">
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title">Define your Goals</h3>
+                <p class="feature-text">Thozhil offers opportunities for job seekers and employers to achieve career goals through placements and internships. Our platform makes it easy to define and pursue objectives.
+
+</p>
+            </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="row align-items-center mb-5 flex-row-reverse">
+            <div class="col-md-6">
+                <img src="/about_img/support.png" class="img-fluid rounded" alt="Support and Assistance">
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title">24/7 Support & Assistance</h3>
+                <p class="feature-text">Thozhil ensures you have assistance whenever needed. Your success is our priority, and we're here 24/7 to support you.</p>
+            </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="row align-items-center mb-5 ">
+            <div class="col-md-6">
+                <img src="/about_img/fix.png" class="img-fluid rounded" alt="Fixing Issues ">
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title">Fixing Issues</h3>
+                <p class="feature-text">Encountered a problem? We've got you covered. Our dedicated support team is committed to swiftly resolving issues and ensuring your experience is seamless.</p>
+            </div>
+        </div>
+        <div class="row align-items-center mb-5 flex-row-reverse">
+            <div class="col-md-6">
+                <img src="/about_img/dev.png" class="img-fluid rounded" alt="Co-Development ">
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title">Co-Development</h3>
+                <p class="feature-text">Embark on a journey of collaborative innovation with Thozhil's Co-Development services. Here, we merge your unique ideas with our expertise to create impactful solutions, ensuring shared success.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Clients-->
+
+<section class="our-clients">
+    <h2 class="clients-heading">Our Clients </h2>
+    <div class="clients-container">
+        <div class="client-item"><img src="/clients/1.png" alt="Client 1"></div>
+        <div class="client-item"><img src="/clients/2.png" alt="Client 2"></div>
+        <div class="client-item"><img src="/clients/3.png" alt="Client 3"></div>
+        <div class="client-item"><img src="/clients/4.png" alt="Client 4"></div>
+        <div class="client-item"><img src="/clients/bl.png" alt="Client 5"></div>
+        <div class="client-item"><img src="/clients/6.png" alt="Client 6"></div>
+        <div class="client-item"><img src="/clients/7.png" alt="Client 7"></div>
+        <div class="client-item"><img src="/clients/8.png" alt="Client 8"></div>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="/">Home</a><br>
+                <a href="/about_us">About Us</a><br>
+                <a href="/careers">Careers</a><br>
+                <a href="/how_it_works">How It Works</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="/login_register">Login/Register</a><br>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <a href="#">Our Mission</a><br>
+                <a href="#">Our Vision</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="/faq">FAQ</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Pricing Policy</a><br>
+            </div>
+
+                      <!-- Subscribe Section -->
+<div class="col-md-4">
+    <div class="subscribe-container text-center p-4">
+        <h5 class="subscribe-title mb-3">Stay Connected!</h5>
+        <p class="subscribe-text mb-4">Subscribe to our newsletter for updates and insights.</p>
+        <form class="subscribe-form d-flex justify-content-center">
+            <input type="email" class="form-control me-2" placeholder="Your Email" required>
+            <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+            <!-- Contact Us Section -->
+          <div class="col-md-4">
+    <h5>Contact Us</h5>
+    <p>Email: <a href="mailto:support@thozhil.co.in">info@thozhil.co.in</a></p>
+    <p>Phone: +91 784 592 1063</p>
+    <div class="social-icons mt-3">
+        <a href="https://www.facebook.com/profile.php?id=61556333192870&mibextid=2JQ9oc" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/thozhil_global/?igsh=MWd3c2JxYXpvNHhoaw%3D%3D" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/thozhil/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</div>
+
+
+        <!-- Footer Bottom -->
+        <div class="text-center">
+            <p>&copy; 2024 Thozhil. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

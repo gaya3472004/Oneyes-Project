@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Thozhil - Career Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4b79a1, #283e51);
+            padding: 1rem 0;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-section {
+            text-align: center;
+            background:  no-repeat center/cover;
+            color: black;
+            padding: 5rem 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section .btn {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero-section .btn:hover {
+            background: #ff3b3b;
+        }
+
+        .hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f7fa;
+}
+
+
+.hero-image {
+    width: 80%; /* Adjust based on how large you want the image */
+    max-width: 500px; /* Max width to ensure it doesn't stretch too much */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: to give the image rounded corners */
+}
+
+/* General Section Styling */
+
+/* Dimmed Background for Popup */
+.filter-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Content of the Popup */
+.filter-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for the Buttons */
+.filter-popup-content button {
+    margin: 10px;
+}
+
+/* Style for Search Bar */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Basic Styling for Select Dropdowns */
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+/* Style for the Job and Internship Listings */
+.job-item, .internship-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+        footer {
+            background: #283e51;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff3b3b;
+        }
+
+        .subscribe-container {
+    background: #283e51; /* Matches footer background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.subscribe-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches footer link color */
+}
+
+.subscribe-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+
+
+
+
+.subscribe-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff; /* White color for icons */
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */
+    color: #ff6b6b; /* Change color on hover */
+}
+
+
+
+    </style>
+<!-- Bootstrap and JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Function to toggle the visibility of the filter form (popup style)
+    function toggleFilterForm() {
+        const filterPopup = document.getElementById('filter-popup');
+        if (filterPopup.style.display === 'none' || filterPopup.style.display === '') {
+            filterPopup.style.display = 'flex'; // Show the popup
+        } else {
+            filterPopup.style.display = 'none'; // Hide the popup
+        }
+    }
+
+    // This function is triggered whenever the user types in the search bar
+    function searchJobs() {
+        const searchQuery = document.getElementById('search').value.toLowerCase();
+        const locationFilter = document.getElementById('location').value;
+        const typeFilter = document.getElementById('type').value;
+        const experienceFilter = document.getElementById('experience').value;
+
+        const jobList = document.getElementById('jobs-list');
+        const internshipList = document.getElementById('internships-list');
+
+        // Simulating the search and filtering logic
+        let filteredJobs = jobsData.filter(job => {
+            const matchesSearch = job.title.toLowerCase().includes(searchQuery);
+            const matchesLocation = locationFilter === 'all' || job.location === locationFilter;
+            const matchesType = typeFilter === 'all' || job.type === typeFilter;
+            const matchesExperience = experienceFilter === 'all' || job.experience === experienceFilter;
+            return matchesSearch && matchesLocation && matchesType && matchesExperience;
+        });
+
+        let filteredInternships = internshipsData.filter(internship => {
+            const matchesSearch = internship.title.toLowerCase().includes(searchQuery);
+            const matchesLocation = locationFilter === 'all' || internship.location === locationFilter;
+            const matchesType = typeFilter === 'all' || internship.type === typeFilter;
+            const matchesExperience = experienceFilter === 'all' || internship.experience === experienceFilter;
+            return matchesSearch && matchesLocation && matchesType && matchesExperience;
+        });
+
+        // Update the job and internship lists dynamically
+        updateJobList(filteredJobs);
+        updateInternshipList(filteredInternships);
+    }
+
+    // Function to display job data on the page
+    function updateJobList(jobs) {
+        const jobList = document.getElementById('jobs-list');
+        jobList.innerHTML = '';
+        jobs.forEach(job => {
+            jobList.innerHTML += `<div class="job-item">
+                <h4>${job.title}</h4>
+                <p>${job.description}</p>
+                <p>Location: ${job.location}</p>
+                <p>Type: ${job.type}</p>
+                <p>Experience: ${job.experience}</p>
+                <button class="apply-btn">Apply</button>
+            </div>`;
+        });
+    }
+
+    // Function to display internship data on the page
+    function updateInternshipList(internships) {
+        const internshipList = document.getElementById('internships-list');
+        internshipList.innerHTML = '';
+        internships.forEach(internship => {
+            internshipList.innerHTML += `<div class="internship-item">
+                <h4>${internship.title}</h4>
+                <p>${internship.description}</p>
+                <p>Location: ${internship.location}</p>
+                <p>Type: ${internship.type}</p>
+                <p>Experience: ${internship.experience}</p>
+                <button class="apply-btn">Apply</button>
+            </div>`;
+        });
+    }
+
+    // Function to apply selected filters
+    function applyFilters() {
+        toggleFilterForm();
+        searchJobs();
+    }
+
+    // Sample data to simulate job and internship listings
+    const jobsData = [
+        { title: 'Software Engineer', description: 'Develop software applications', location: 'remote', type: 'full-time', experience: 'mid' },
+        { title: 'Data Scientist', description: 'Analyze data and build models', location: 'onsite', type: 'full-time', experience: 'senior' },
+        { title: 'Front-End Developer', description: 'Build user interfaces', location: 'remote', type: 'part-time', experience: 'entry' }
+    ];
+
+    const internshipsData = [
+        { title: 'Intern - Software Developer', description: 'Assist with software development', location: 'remote', type: 'internship', experience: 'entry' },
+        { title: 'Intern - Data Analyst', description: 'Assist with data analysis', location: 'onsite', type: 'internship', experience: 'entry' }
+    ];
+</script>
+
+ </head>
+<body>
+
+<header>
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Thozhil</div>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about_us">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/how_it_works">How It Works</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/login_register">Login/Register</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero Section -->
+
+
+ 
+<div class="career-page-container">
+    <h1>Career Opportunities</h1>
+
+    <!-- Search and Filter Section -->
+    <div class="search-filter-section">
+        <div class="search-bar-container">
+            <label for="search">Search Jobs:</label>
+            <input type="text" id="search" placeholder="Search jobs or internships" oninput="searchJobs()">
+            <button id="filter-btn" class="btn btn-outline-primary" onclick="toggleFilterForm()">Filter</button>
+        </div>
+    </div>
+
+    <!-- Filter Popup (Hidden by Default) -->
+    <div id="filter-popup" class="filter-popup" style="display: none;">
+        <div class="filter-popup-content">
+            <h3>Filters</h3>
+            <form>
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="all">All Locations</option>
+                    <option value="remote">Remote</option>
+                    <option value="onsite">On-site</option>
+                </select>
+
+                <label for="type">Job Type:</label>
+                <select id="type">
+                    <option value="all">All</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                </select>
+
+                <label for="experience">Experience Level:</label>
+                <select id="experience">
+                    <option value="all">All Levels</option>
+                    <option value="entry">Entry Level</option>
+                    <option value="mid">Mid Level</option>
+                    <option value="senior">Senior Level</option>
+                </select>
+
+                <button type="button" class="btn btn-secondary" onclick="applyFilters()">Apply Filters</button>
+                <button type="button" class="btn btn-secondary" onclick="toggleFilterForm()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Job Listings Section -->
+    <div id="jobs-list" class="job-listings">
+        <h2>Jobs</h2>
+        <!-- Dynamic Content Will Be Added Here -->
+    </div>
+
+    <!-- Internship Listings Section -->
+    <div id="internships-list" class="internship-listings" style="display: none;">
+        <h2>Internships</h2>
+        <!-- Dynamic Content Will Be Added Here -->
+    </div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="/">Home</a><br>
+                <a href="/about_us">About Us</a><br>
+                <a href="/careers">Careers</a><br>
+                <a href="/how_it_works">How It Works</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="/login_register">Login/Register</a><br>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <a href="#">Our Mission</a><br>
+                <a href="#">Our Vision</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="/faq">FAQ</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Pricing Policy</a><br>
+            </div>
+
+                      <!-- Subscribe Section -->
+<div class="col-md-4">
+    <div class="subscribe-container text-center p-4">
+        <h5 class="subscribe-title mb-3">Stay Connected!</h5>
+        <p class="subscribe-text mb-4">Subscribe to our newsletter for updates and insights.</p>
+        <form class="subscribe-form d-flex justify-content-center">
+            <input type="email" class="form-control me-2" placeholder="Your Email" required>
+            <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+            <!-- Contact Us Section -->
+          <div class="col-md-4">
+    <h5>Contact Us</h5>
+    <p>Email: <a href="mailto:support@thozhil.co.in">info@thozhil.co.in</a></p>
+    <p>Phone: +91 784 592 1063</p>
+    <div class="social-icons mt-3">
+        <a href="https://www.facebook.com/profile.php?id=61556333192870&mibextid=2JQ9oc" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/thozhil_global/?igsh=MWd3c2JxYXpvNHhoaw%3D%3D" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/thozhil/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</div>
+
+
+        <!-- Footer Bottom -->
+        <div class="text-center">
+            <p>&copy; 2024 Thozhil. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+    

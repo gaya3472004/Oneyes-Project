@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #1b5cb8;
+        }
+        .toggle {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .toggle a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toggle a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #283e51;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff3b3b;
+        }
+
+                .subscribe-container {
+    background: #283e51; /* Matches footer background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.subscribe-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches footer link color */
+}
+
+.subscribe-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+
+
+
+
+.subscribe-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+
+    </style>
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>Career Website</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="careers.html">Careers</a>
+            <a href="how_it_works.html">How It Works</a>
+            <a href="faq.html">FAQ</a>
+            <a href="login_register.html">Login/Register</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h1>Welcome! Please Login or Register</h1>
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="toggle">New here? <a href="#" onclick="toggleForms()">Register</a></div>
+        </div>
+        <div class="form-container" id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="toggle">Already have an account? <a href="#" onclick="toggleForms()">Login</a></div>
+        </div>
+    </section>
+
+
+<<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="index.html">Home</a><br>
+                <a href="about_us.html">About Us</a><br>
+                <a href="careers.html">Careers</a><br>
+                <a href="how_it_works.html">How It Works</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="login_register.html">Login/Register</a><br>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <a href="#">Our Mission</a><br>
+                <a href="#">Our Vision</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="faq.html">FAQ</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Pricing Policy</a><br>
+            </div>
+
+            <!-- Subscribe Section -->
+<div class="col-md-4">
+    <div class="subscribe-container text-center p-4">
+        <h5 class="subscribe-title mb-3">Stay Connected!</h5>
+        <p class="subscribe-text mb-4">Subscribe to our newsletter for updates and insights.</p>
+        <form class="subscribe-form d-flex justify-content-center">
+            <input type="email" class="form-control me-2" placeholder="Your Email" required>
+            <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+            <!-- Contact Us Section -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: <a href="mailto:support@thozhil.co.in">info@thozhil.co.in</a></p>
+                <p>Phone: +91 784 592 1063</p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center">
+            <p>&copy; 2024 Thozhil. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
